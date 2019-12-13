@@ -18,5 +18,9 @@ namespace MvcCV.Controllers
             cs.Deger2 = db.TBLEXPERIENCE.ToList();
             return View(cs);
         }
+        public ActionResult NewExperience()
+        {
+            return View();
+        }
     }
 }
