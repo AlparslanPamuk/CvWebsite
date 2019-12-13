@@ -1,8 +1,32 @@
-﻿
+﻿@model MvcCV.Models.Sınıf.Class1
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
 
-<h2>Index</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>SURNAME</th>
+            <th>ADDRESS</th>
+            <th>PHONE</th>
+            <th>MAIL</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var x in Model.Deger1)
+        {
+        <tr>
+            <td>@x.ID</td>
+            <td>@x.NAME</td>
+            <td>@x.SURNAME</td>
+            <td>@x.ADDRESS</td>
+            <td>@x.PHONE</td>
+            <td>@x.MAIL</td>
+        </tr>
+        }
+    </tbody>
+</table>
 

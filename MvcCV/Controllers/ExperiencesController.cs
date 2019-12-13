@@ -8,14 +8,14 @@ using MvcCV.Models.Sınıf;
 
 namespace MvcCV.Controllers
 {
-    public class AboutController : Controller
+    public class ExperiencesController : Controller
     {
-        // GET: About
+        // GET: Experiences
         DbMvcCvEntities db = new DbMvcCvEntities();
         public ActionResult Index()
         {
             Class1 cs = new Class1();
-            cs.Deger1 = db.TBLABOUT.ToList();
+            cs.Deger2 = db.TBLEXPERIENCE.ToList();
             return View(cs);
         }
     }
