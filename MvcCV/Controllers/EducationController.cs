@@ -19,5 +19,17 @@ namespace MvcCV.Controllers
             cs.Deger3 = db.TBLEDUCATION.ToList();
             return View(cs);
         }
+        [HttpGet]
+        public ActionResult NewEducation()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult NewEducation(TBLEDUCATION p)
+        {
+            db.TBLEDUCATION.Add(p);
+            db.SaveChanges();
+            return View();
+        }
     }
 }

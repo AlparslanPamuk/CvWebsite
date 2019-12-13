@@ -316,6 +316,7 @@
     <Content Include="Views\Interests\Index.cshtml" />
     <Content Include="Views\Certificates\Index.cshtml" />
     <Content Include="Views\Experiences\NewExperience.cshtml" />
+    <Content Include="Views\Education\NewEducation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -18,8 +18,18 @@ namespace MvcCV.Controllers
             cs.Deger2 = db.TBLEXPERIENCE.ToList();
             return View(cs);
         }
+        [HttpGet]
         public ActionResult NewExperience()
         {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult NewExperience(TBLEXPERIENCE p)
+        {
+            db.TBLEXPERIENCE.Add(p);
+            db.SaveChanges();
+            //return RedirectToAction("/Experiences/Index/");
             return View();
         }
     }
