@@ -12,6 +12,8 @@
             <th>SUBTITLE</th>
             <th>DATE</th>
             <th>DETAILS</th>
+            <th>DELETE</th>
+            <th>UPDATE</th>
         </tr>
     </thead>
     <tbody>
@@ -23,6 +25,8 @@
             <td>@x.SUBTITLE</td>
             <td>@x.DATE</td>
             <td>@x.DETAILS</td>
+            <td><a href="/Experiences/DeleteExperience/@x.ID" class="btn btn-danger">Delete</a></td>
+            <td><a href="#" class="btn btn-success">Update</a></td>
         </tr>
         }
     </tbody>

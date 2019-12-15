@@ -32,5 +32,12 @@ namespace MvcCV.Controllers
             //return RedirectToAction("/Experiences/Index/");
             return View();
         }
+        public ActionResult DeleteExperience(int id)
+        {
+            var experience = db.TBLEXPERIENCE.Find(id);
+            db.TBLEXPERIENCE.Remove(experience);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
