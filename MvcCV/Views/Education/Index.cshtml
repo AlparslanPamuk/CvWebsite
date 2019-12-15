@@ -12,6 +12,8 @@
             <th>SUBTITLE</th>
             <th>DEPARTMENT</th>
             <th>GPA</th>
+            <th>DELETE</th>
+            <th>UPDATE</th>
         </tr>
     </thead>
     <tbody>
@@ -23,6 +25,8 @@
                 <td>@x.SUBTITLE</td>
                 <td>@x.DEPARTMENT</td>
                 <td>@x.GPA</td>
+                <td><a href="/Education/DeleteEducation/@x.ID" class="btn btn-danger">Delete</a> </td>
+                <td><a href="/Education/DeleteEducation/@x.ID" class="btn btn-success">Update</a></td>
             </tr>
         }
     </tbody>

@@ -31,5 +31,12 @@ namespace MvcCV.Controllers
             db.SaveChanges();
             return View();
         }
+        public ActionResult DeleteEducation(int id)
+        {
+            var education = db.TBLEDUCATION.Find(id);
+            db.TBLEDUCATION.Remove(education);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
