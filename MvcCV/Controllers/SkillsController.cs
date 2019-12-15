@@ -18,5 +18,17 @@ namespace MvcCV.Controllers
             cs.Deger4 = db.TBLSKILLS.ToList();
             return View(cs);
         }
+        [HttpGet]
+        public ActionResult NewSkill()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult NewSkill(TBLSKILLS p)
+        {
+            db.TBLSKILLS.Add(p);
+            db.SaveChanges();
+            return View(p);
+        }
     }
 }
