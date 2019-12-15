@@ -30,5 +30,12 @@ namespace MvcCV.Controllers
             db.SaveChanges();
             return View(p);
         }
+        public ActionResult DeleteSkill(int id)
+        {
+            var skill = db.TBLSKILLS.Find(id);
+            db.TBLSKILLS.Remove(skill);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
