@@ -30,6 +30,13 @@ namespace MvcCV.Controllers
             db.SaveChanges();
             return View(p);
         }
+        public ActionResult DeleteInterest(int id)
+        {
+            var interest = db.TBLINTERESTS.Find(id);
+            db.TBLINTERESTS.Remove(interest);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
     
     

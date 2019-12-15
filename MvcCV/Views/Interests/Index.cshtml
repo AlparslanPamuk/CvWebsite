@@ -9,6 +9,8 @@
         <tr>
             <th>ID</th>
             <th>INTERESTS</th>
+            <th>DELETE</th>
+            <th>UPDATE</th>
 
         </tr>
     </thead>
@@ -18,6 +20,8 @@
             <tr>
                 <th>@x.ID</th>
                 <td>@x.INTEREST</td>
+                <td>@Html.ActionLink("Delete", "DeleteInterest", new { id = x.ID }, new { @class = "btn btn-danger", onclick = "return confirm('Do you want to delete now?')" })</td>
+                <td><a href="Interests/UpdateInterest/@x.ID" class="btn btn-success">Update</a></td>
             </tr>
         }
     </tbody>
