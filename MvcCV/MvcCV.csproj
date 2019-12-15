@@ -318,6 +318,8 @@
     <Content Include="Views\Experiences\NewExperience.cshtml" />
     <Content Include="Views\Education\NewEducation.cshtml" />
     <Content Include="Views\Skills\NewSkill.cshtml" />
+    <Content Include="Views\Interests\NewInterest.cshtml" />
+    <Content Include="Views\Certificates\NewCertificate.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

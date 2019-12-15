@@ -18,5 +18,17 @@ namespace MvcCV.Controllers
             cs.Deger6 = db.TBLAWARDS.ToList();
             return View(cs);
         }
+        [HttpGet]
+        public ActionResult NewCertificate()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult NewCertificate(TBLAWARDS p)
+        {
+            db.TBLAWARDS.Add(p);
+            db.SaveChanges();
+            return View(p);
+        }
     }
 }

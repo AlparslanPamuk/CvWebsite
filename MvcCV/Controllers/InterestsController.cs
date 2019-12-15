@@ -18,5 +18,20 @@ namespace MvcCV.Controllers
             cs.Deger5 = db.TBLINTERESTS.ToList();
             return View(cs);
         }
+        [HttpGet]
+        public ActionResult NewInterest()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult NewInterest(TBLINTERESTS p)
+        {
+            db.TBLINTERESTS.Add(p);
+            db.SaveChanges();
+            return View(p);
+        }
     }
+    
+    
+    
 }
