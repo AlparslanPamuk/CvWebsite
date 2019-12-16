@@ -321,6 +321,7 @@
     <Content Include="Views\Interests\NewInterest.cshtml" />
     <Content Include="Views\Certificates\NewCertificate.cshtml" />
     <Content Include="Views\About\BringData.cshtml" />
+    <Content Include="Views\Experiences\BringExperience.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

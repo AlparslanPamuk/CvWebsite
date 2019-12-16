@@ -39,5 +39,20 @@ namespace MvcCV.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+        public ActionResult BringExperience(int id)
+        {
+            var data = db.TBLEXPERIENCE.Find(id);
+            return View("BringExperience", data);
+        }
+        public ActionResult UpdateExperience(TBLEXPERIENCE p)
+        {
+            var datas = db.TBLEXPERIENCE.Find(p.ID);
+            datas.TITLE = p.TITLE;
+            datas.SUBTITLE = p.SUBTITLE;
+            datas.DETAILS = p.DETAILS;
+            datas.DATE = p.DATE;
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
