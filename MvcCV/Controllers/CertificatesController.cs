@@ -30,5 +30,12 @@ namespace MvcCV.Controllers
             db.SaveChanges();
             return View(p);
         }
+        public ActionResult DeleteCertificate(int id)
+        {
+            var delcertificate = db.TBLAWARDS.Find(id);
+            db.TBLAWARDS.Remove(delcertificate);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

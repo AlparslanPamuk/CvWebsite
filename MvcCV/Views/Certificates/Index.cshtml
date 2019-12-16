@@ -9,16 +9,20 @@
         <tr>
             <th>ID</th>
             <th>Certificates</th>
+            <th>DELETE</th>
+            <th>UPDATE</th>
 
         </tr>
     </thead>
     <tbody>
         @foreach (var x in Model.Deger6)
         {
-            <tr>
-                <th>@x.ID</th>
-                <td>@x.AWARD</td>
-            </tr>
+        <tr>
+            <th>@x.ID</th>
+            <td>@x.AWARD</td>
+            <td>@Html.ActionLink("Delete", "DeleteCertificate", new { id = x.ID }, new { @class = "btn btn-danger", onclick = "return confirm('Do you want to delete now?')" })</td>
+            <td><a href="Certificates/UpdateCertificate/@x.ID" class="btn btn-success">Update</a></td>
+        </tr>
         }
     </tbody>
 </table>

@@ -18,5 +18,11 @@ namespace MvcCV.Controllers
             cs.Deger1 = db.TBLABOUT.ToList();
             return View(cs);
         }
+        public ActionResult BringData(int id)
+        {
+            var data = db.TBLABOUT.Find(id);
+            return View("BringData", data);
+        }
+        
     }
 }
