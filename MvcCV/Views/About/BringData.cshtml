@@ -5,7 +5,7 @@
 }
 
 
-@using (Html.BeginForm("Update", "About", FormMethod.Post))
+@using (Html.BeginForm("UpdateAbout", "About", FormMethod.Post))
 {
 <div class="form-group">
     @Html.LabelFor(m => m.ID)
@@ -25,6 +25,9 @@
     <br />
     @Html.LabelFor(m => m.MAIL)
     @Html.TextBoxFor(m => m.MAIL, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(m => m.ABOUT)
+    @Html.TextAreaFor(m => m.ABOUT, new { @class = "form-control" })
     <br />
     <button class="btn btn-primary">Update</button>
 </div>

@@ -23,6 +23,18 @@ namespace MvcCV.Controllers
             var data = db.TBLABOUT.Find(id);
             return View("BringData", data);
         }
-        
+        public ActionResult UpdateAbout(TBLABOUT alparslan)
+        {
+            var mustafa = db.TBLABOUT.Find(alparslan.ID);
+            mustafa.NAME = alparslan.NAME;
+            mustafa.SURNAME = alparslan.SURNAME;
+            mustafa.PHONE = alparslan.PHONE;
+            mustafa.MAIL = alparslan.MAIL;
+            mustafa.ABOUT = alparslan.ABOUT;
+            db.SaveChanges();
+            return RedirectToAction("Index");
+
+
+        }
     }
 }
