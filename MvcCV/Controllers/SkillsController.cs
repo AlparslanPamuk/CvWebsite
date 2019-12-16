@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.Mvc;
 using MvcCV.Models.Entity;
 using MvcCV.Models.Sınıf;
+using PagedList;
+using PagedList.Mvc;
 
 namespace MvcCV.Controllers
 {
@@ -12,11 +14,11 @@ namespace MvcCV.Controllers
     {
         // GET: Skills
         DbMvcCvEntities db = new DbMvcCvEntities();
-        public ActionResult Index()
+        public ActionResult Index(int page = 1)
         {
-            Class1 cs = new Class1();
-            cs.Deger4 = db.TBLSKILLS.ToList();
-            return View(cs);
+           // Class1 cs = new Class1();
+            var degerler = db.TBLSKILLS.ToList().ToPagedList(page, 3);
+            return View(degerler);
         }
         [HttpGet]
         public ActionResult NewSkill()
