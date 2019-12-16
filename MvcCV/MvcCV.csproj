@@ -322,6 +322,7 @@
     <Content Include="Views\Certificates\NewCertificate.cshtml" />
     <Content Include="Views\About\BringData.cshtml" />
     <Content Include="Views\Experiences\BringExperience.cshtml" />
+    <Content Include="Views\Education\BringEducation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

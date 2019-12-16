@@ -38,5 +38,21 @@ namespace MvcCV.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+        public ActionResult BringEducation(int id)
+        {
+            var education = db.TBLEDUCATION.Find(id);
+            return View("BringEducation", education);
+        }
+        public ActionResult UpdateEducation(TBLEDUCATION p)
+        {
+            var data = db.TBLEDUCATION.Find(p.ID);
+            data.TITLE = p.TITLE;
+            data.SUBTITLE = p.SUBTITLE;
+            data.DEPARTMENT = p.DEPARTMENT;
+            data.GPA = p.GPA;
+            db.SaveChanges();
+            return RedirectToAction("Index");
+
+        }
     }
 }
