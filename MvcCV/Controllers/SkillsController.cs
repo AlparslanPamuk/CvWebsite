@@ -37,5 +37,18 @@ namespace MvcCV.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+        public ActionResult BringSkill(int id)
+        {
+            var skill = db.TBLSKILLS.Find(id);
+            return View("BringSkill", skill);
+        }
+        public ActionResult UpdateSkill(TBLSKILLS p)
+        {
+            var data = db.TBLSKILLS.Find(p.ID);
+            data.SKILL = p.SKILL;
+            db.SaveChanges();
+            return RedirectToAction("Index");
+
+        }
     }
 }

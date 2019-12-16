@@ -323,6 +323,7 @@
     <Content Include="Views\About\BringData.cshtml" />
     <Content Include="Views\Experiences\BringExperience.cshtml" />
     <Content Include="Views\Education\BringEducation.cshtml" />
+    <Content Include="Views\Skills\BringSkill.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

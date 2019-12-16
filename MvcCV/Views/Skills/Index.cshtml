@@ -22,7 +22,7 @@
                 <th>@x.ID</th>
                 <td>@x.SKILL</td>
                 <td><a href="/Skills/DeleteSkill/@x.ID" class="btn btn-danger">Delete</a></td>
-                <td><a href="/skills/UpdateSkill/@x.ID" class="btn btn-success">Update</a></td>
+                <td><a href="/Skills/BringSkill/@x.ID" class="btn btn-success">Update</a></td>
                 <td>@Html.ActionLink("Delete Button", "DeleteSkill", new { id=x.ID}, new { @class="btn btn-warning",onclick="return confirm('Do you want to delete now?')"})</td>
             </tr>
         }
