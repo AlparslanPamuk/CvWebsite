@@ -37,6 +37,19 @@ namespace MvcCV.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+        public ActionResult BringInterest(int id)
+        {
+            var interest = db.TBLINTERESTS.Find(id);
+            return View("BringInterest", interest);
+        }
+        public ActionResult UpdateInterest(TBLINTERESTS p)
+        {
+            var data = db.TBLINTERESTS.Find(p.ID);
+            data.INTEREST = p.INTEREST;
+            db.SaveChanges();
+            return RedirectToAction("Index");
+
+        }
     }
     
     
