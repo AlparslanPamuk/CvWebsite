@@ -1,7 +1,17 @@
-﻿@model MvcCV.Models.Sınıf.Class1
+﻿@using MvcCV.Models.Entity
+@model List<TBLAWARDS>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+@using(Html.BeginForm("Index", "Certificates", FormMethod.Get))
+{
+    <p>
+        Search: @Html.TextBox("p")
+        <input type="submit" value="Search" />  
+    </p>
+
 }
 
 <table class="table table-bordered">
@@ -15,7 +25,7 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var x in Model.Deger6)
+        @foreach (var x in Model)
         {
         <tr>
             <th>@x.ID</th>
